@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/menu_cargar">
+
+    <fragment
+        android:id="@+id/menu_borrar"
+        android:name="com.juanbecerra.recuperatoriomobiles_becerra_juan.ui.Borrar.Borrar"
+        android:label="Borrar Inmueble"
+        tools:layout="@layout/fragment_borrar" >
+        <action
+            android:id="@+id/action_menu_borrar_to_menu_cargar"
+            app:destination="@id/menu_cargar" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_cargar"
+        android:name="com.juanbecerra.recuperatoriomobiles_becerra_juan.ui.Cargar.Cargar"
+        android:label="Cargar Inmueble"
+        tools:layout="@layout/fragment_cargar" >
+        <action
+            android:id="@+id/action_menu_cargar_to_menu_borrar"
+            app:destination="@id/menu_borrar" />
+    </fragment>
+</navigation>
